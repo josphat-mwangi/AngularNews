@@ -1,0 +1,27 @@
+<div>
+    <div class="flex md:flex-row flex-col justify-between items-center">
+        <h2 class="font-bold md:text-6xl  text-4xl drop-shadow-md">Untitled Blog</h2>
+        <div class="max-w-xs">
+            <p class="text-lg text-gray-500 font-semibold">New product features, the latest in technology, solutions, and updates.</p>
+        </div>
+    </div>
+    <div class="py-8">
+        <form >
+            <div class="flex relative  md:w-1/2 w-full max-w-md" >
+                <input class="border-2 border-primary bg-red transition h-12 px-5 pr-16 rounded-3xl focus:outline-none w-full text-black text-lg " type="search" name="search" placeholder="Search" [(ngModel)] ="searchQuery" />
+                <button type="submit" class="absolute right-0  bg-black py-3 px-8 rounded-3xl text-white" (click)="search()">
+                    Search
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="pt-6">
+        <app-category (dataEvent)="receiveData($event)"></app-category>
+    </div>
+    <div class="pt-12">
+        <app-blogs [sources] = "sources"></app-blogs>
+    </div>
+
+
+</div>
+
