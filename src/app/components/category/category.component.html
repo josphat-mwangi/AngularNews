@@ -1,0 +1,11 @@
+<div class="border-b border-gray-500 relative w-full">
+    <div class="flex md:space-x-6  space-x-1 md:text-lg text-sm">
+        <div *ngFor="let country of countries">
+            <p class="py-1 px-2 text-gray-500  font-semibold cursor-pointer" (click)="onCountry(country.countryCode)">
+                {{country.country}}
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- border-b-4 border-purple-500 -->
