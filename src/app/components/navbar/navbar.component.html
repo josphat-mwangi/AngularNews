@@ -1,0 +1,71 @@
+<nav class="bg-white">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between ">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400   focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" (click)="toggleMenu()">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path [ngClass]="{'hidden': isMenuOpen}" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <div class="px-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 block">
+                <path [ngClass]="{'hidden': !isMenuOpen}" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div class="flex md:flex-1 flex-none items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center md:px-0 px-10">
+            <h4 class="font-bold text-2xl">Untitled UI</h4>
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4 subpixel-antialiased ">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300  " -->
+              <a href="/" class="text-[#151B29]  rounded-md px-3 py-2 text-base font-semibold drop-shadow-md " >Home</a>
+  
+              <a href="#" class="text-[#151B29]  rounded-md px-3 py-2 text-base font-semibold drop-shadow-md">Products</a>
+  
+              <a href="#" class="text-[#151B29]  rounded-md px-3 py-2 text-base font-semibold drop-shadow-md">Resources</a>
+  
+              <a href="#" class="text-[#151B29]   rounded-md px-3 py-2 text-base font-semibold drop-shadow-md">Pricing</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center md:space-x-4 space-x-2 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <button type="button" class="rounded-full text-[#151B29] text-base p-1 font-semibold  focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                Login
+            </button>
+  
+          
+            <button type="button" class="flex rounded-full py-2 px-5 font-bold text-gray-200  bg-[#151B29] text-base focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 " >
+                <p class="drop-shadow-md">Sign up</p>
+            </button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu" [ngClass]="{'hidden': !isMenuOpen}">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300  " -->
+        <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
+  
+        <a href="#" class="text-gray-300   block rounded-md px-3 py-2 text-base font-medium">Productshhhhhhhh</a>
+  
+        <a href="#" class="text-gray-300   block rounded-md px-3 py-2 text-base font-medium">Resources</a>
+  
+        <a href="#" class="text-gray-300   block rounded-md px-3 py-2 text-base font-medium">Pricing</a>
+      </div>
+    </div>
+</nav>
