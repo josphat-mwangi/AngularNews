@@ -1,0 +1,32 @@
+<div class="grid md:grid-cols-2 grid-cols-1 md:space-x-4 space-x-2">
+  <div class=" md:max-w-xl w-full overflow-hidden rounded pb-5" *ngFor="let source of sources">
+    <div class="relative">
+      <div *ngIf="source.urlToImage !== null">
+        <img src={{source.urlToImage}} class="aspect-video w-full object-cover" alt=""  (click)="onSelectedBlog(source.title)"/>
+      </div>
+      <div class="absolute bottom-0 md:h-24 h-24 w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60">
+        <div class="flex flex-row justify-between items-center px-4 py-6 text-white">
+          <div class="flex flex-col ">
+            <div class="w-1/2">
+              <h2>{{source.author}}</h2>
+            </div>
+            <p>{{source.publishedAt | date:'mediumDate'}}</p>
+          </div>
+          <p>{{source.source.name}}</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pt-4">
+      <h3 class="text-xl font-extrabold text-gray-900 underline">{{source.title}}</h3>
+      <p class="mt-1 text-gray-500">{{source.description}}</p>
+    </div>
+    <a class="flex py-4 font-semibold gap-2" [routerLink]="['/blog']" (click)="onSelectedBlog(source.title)">
+      <p>Read Post </p>
+
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+      </svg>      
+    </a>
+  </div>
+</div>
